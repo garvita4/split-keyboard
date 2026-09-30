@@ -1,47 +1,33 @@
-# Split Keyboard – Daily Work Journal
+# September 29: Getting Started with the Schematic
 
-Date: 29 September 2026
-Recording Time: 52 minutes
+Today, I started working on the schematic for my split mechanical keyboard. The first step was setting up the tools and gathering the components required for the design.
 
-# Work Completed
+I set up KiCad for the schematic and EasyEDA to find the necessary component symbols and footprints. After downloading the required libraries, I started adding the components to the schematic.
 
-Today, I worked on the schematic design of the split mechanical keyboard using KiCad.
+# Setting up the key matrix
 
-1. Set up KiCad and prepared the project for schematic design.
-2. Set up EasyEDA for accessing the required component symbols and footprints.
-3. Downloaded the necessary symbols and footprints for the components used in the keyboard.
-4. Added the required components to the KiCad schematic, including:
+I added 21 keys, each with an individual diode, along with 21 LEDs and their corresponding resistors for the keyboard's backlighting.
 
-   * 21 keys with individual diodes.
-   * 21 backlighting LEDs with corresponding resistors.
-   * Power MOSFET.
-   * ESP32-E2 SMD as the main control unit.
-   * USB Type-C charging IC.
-   * Rotary encoder.
-   * OLED display.
-   * NFC reader.
-   * 2 capacitors, 7 resistors, and 1 fuse.
-5. Worked on organizing the keyboard's row and column connections.
-6. Added global labels to establish connections between different parts of the schematic.
+The keys need to be arranged into rows and columns so that the controller can identify individual key presses. I started organizing these connections and added global labels to keep the schematic manageable as the design grows.
 
-# Documentation
+![Key matrix](key-matrix.png)
 
-Saved screenshots of the schematic dated 29 September for documentation purposes.
+# Adding the main components
 
-A screen recording was also attempted during the session. However, due to an incorrect screen selection, the workspace window was not captured in the final video.
+After setting up the keys, I added the other major components planned for the keyboard. These included the ESP32-E2 SMD as the main controller, a USB Type-C charging IC, a power MOSFET, a rotary encoder, an OLED display and an NFC reader.
 
-# Outcome
+I also added the supporting components: two capacitors, seven resistors and a fuse. The backlighting LEDs and their resistors were arranged separately from the key matrix.
 
-The initial schematic setup was completed, and the major components required for the split keyboard were added. Work was also done on organizing the key matrix and establishing connections using global labels. The schematic will be refined further in the next session.
+![Components](components.png)
 
+# Putting the schematic together
 
-# Schematic Screenshots
+With the main components in place, I continued organizing the different sections of the schematic and connecting related nets using global labels. This gave me an initial layout containing the key matrix, backlighting circuit and the other planned hardware.
 
-- Overall Schematic
-[Overall Schematic](schematic-overview.png)
+![Overall schematic](schematic-overview.png)
 
-- Key Matrix
-[Key Matrix](key-matrix.png)
+The schematic is still a work in progress. The next step is to review the connections carefully and make sure the circuit is ready before moving on to PCB design.
 
-- Components and Connections
-[Components](components.png)
+I also attempted to record the session, but the KiCad workspace wasn't captured because I had selected the wrong screen. I've included screenshots here to document the work completed during the session.
+
+## Time spent this session: 52 minutes
