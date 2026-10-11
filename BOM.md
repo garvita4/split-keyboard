@@ -27,12 +27,11 @@
 | [Capacitors](https://www.ktron.in/product/100nf-100v-ceramic-capacitor-0805/) | Component electrical stability | 30 | $0.01 | $0.30 | [ktron.in](https://www.ktron.in/product/100nf-100v-ceramic-capacitor-0805/) |
 | [Gateron Oil King](https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/akko-v3-pro-cream-black-switch/) | Switches | 5 | $2.58 | $12.90 | [Meckeys](https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/akko-v3-pro-cream-black-switch/) |
 | [PCB](https://zbotic.in/) | Component housing | 1 | $45.00 | $45.00 | [Zbotic](https://zbotic.in/) |
-| [Case](https://printlegion.hackclub.com/) | Housing of all electronics | 1 | $20.00 | $20.00 | [Printing Legion](https://printlegion.hackclub.com/) |
 | [1.8" TFT Display](https://robu.in/product/62060/) | Display | 2 | $3.19 | $6.38 | [Robu.in](https://robu.in/product/62060/) |
 | [Slide Switch](https://robu.in/product/slide-switch-ss-12d03-1p2t/) | Power control | 2 | $0.01 | $0.02 | [Robu.in](https://robu.in/product/slide-switch-ss-12d03-1p2t/) |
 | [SMD Switches](https://makerbazar.in/products/micro-tactile-tact-keys-tasten-smd-push-side-button-schalter) | Reboot and flash | 1 | $0.21 | $0.21 | [MakerBazar](https://makerbazar.in/products/micro-tactile-tact-keys-tasten-smd-push-side-button-schalter) |
-| **Parts subtotal** | — | — | — | **$134.80** | — |
+| **Parts subtotal** | — | — | — | **$114.80** | — |
 | **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$134.80** | — |
+| **Total** | — | — | — | **$114.80** | — |
 
-**$34.80 over the tier's funding.** Every tier gives a fixed amount for parts, so this needs cutting back or a higher tier.
+**$14.80 over the tier's funding.** Every tier gives a fixed amount for parts, so this needs cutting back or a higher tier.
