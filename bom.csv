@@ -1,0 +1,20 @@
+Part,Description,Qty,Unit Cost,Total Cost,Vendor
+ESP32-S3-WROOM-1 Module,MCU,2,$4.37,$8.74,Robu.in
+Rotatory encoder,Volume and brightness control,2,$0.64,$1.28,Robu.in
+NFC RFID Reader,For the device unlocking,2,$1.44,$2.88,https://www.indianhobbycenter.com/products/rc522-mini-rfid-reader-writer-spi-s50-with-rfid-card-and-tag?variant=41430763667499
+2000mAh 3.7V Micro LiPo Battery,Power Source,2,$3.43,$6.86,Robu.in
+TP4056 IC,Charging IC,2,$2.00,$4.00,https://www.ktron.in/product/tp4056-ic/#&gid=1&pid=1
+ME6211C33M5G,Regulators,2,$0.08,$0.16,Robu.in
+AO3400A-HUASHUO,LED Mosfet,2,$0.06,$0.12,Robu.in
+SMD1206B050TF,Fuse,1,$0.05,$0.05,Robu.in
+TYPE-C,Charging and interconnection,4,$0.27,$1.08,Robu.in
+1N4148WS,Diodes,50,$0.12,$6.00,Robu.in
+LED,Backlight,50,$0.01,$0.50,Robu.in
+Resistor,Led Protection And other things,60,$0.01,$0.60,Ktron.in
+Capacitors,for the component electrical stability,30,$0.01,$0.30,https://www.ktron.in/product/resistor-30k-ohms-1-1-8w-smd-0805/
+Gateron Oil King,Switches,5,$2.58,$12.90,https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/akko-v3-pro-cream-black-switch/
+PCB,Component Housing,1,$45.00,$45.00,https://zbotic.in/pcb-manufacturing/
+1.8 TFT display,Display,2,$3.19,$6.38,Robu.in
+Slide Switch,Power Control,2,$0.01,$0.02,Robu.in
+smdswitches,rebbot and flash,1,$0.21,$0.21,https://makerbazar.in/products/micro-tactile-tact-keys-tasten-smd-push-side-button-schalter
+Grand Total,,,,$117.08,
