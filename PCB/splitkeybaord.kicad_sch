@@ -2,12 +2,12 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "e1af24d2-b379-41bc-99d4-76686fb1dd1a")
+	(uuid "667832f1-ce12-4971-b6ce-e9db115b7c92")
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 20.32 107.95)
-		(size 99.06 73.66)
+		(at 23.495 19.05)
+		(size 162.56 59.69)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -20,9 +20,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "7959ea45-cec8-4fd5-ab7f-28a11d4ef1b9")
-		(property "Sheetname" "right"
-			(at 20.32 107.2384 0)
+		(uuid "4bd30d72-a016-4430-88d8-3590e5447e27")
+		(property "Sheetname" "left"
+			(at 23.495 18.3384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +33,7 @@
 			)
 		)
 		(property "Sheetfile" "keyboard.kicad_sch"
-			(at 20.32 182.1946 0)
+			(at 23.495 79.3246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -44,16 +44,16 @@
 			)
 		)
 		(instances
-			(project "split keyboard"
-				(path "/e1af24d2-b379-41bc-99d4-76686fb1dd1a"
-					(page "3")
+			(project "splitkeybaord (3)"
+				(path "/667832f1-ce12-4971-b6ce-e9db115b7c92"
+					(page "2")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 22.86 25.4)
-		(size 97.79 67.31)
+		(at 24.13 99.695)
+		(size 165.1 62.23)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -66,9 +66,9 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "b1a493ff-6fdc-4768-884d-f4039f6a72a3")
-		(property "Sheetname" "left"
-			(at 22.86 24.6884 0)
+		(uuid "d7264bbc-2527-4862-872f-0e3343d10ef9")
+		(property "Sheetname" "right"
+			(at 24.13 98.9834 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -79,7 +79,7 @@
 			)
 		)
 		(property "Sheetfile" "keyboard.kicad_sch"
-			(at 22.86 93.2946 0)
+			(at 24.13 162.5096 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -90,9 +90,9 @@
 			)
 		)
 		(instances
-			(project "split keyboard"
-				(path "/e1af24d2-b379-41bc-99d4-76686fb1dd1a"
-					(page "2")
+			(project "splitkeybaord (3)"
+				(path "/667832f1-ce12-4971-b6ce-e9db115b7c92"
+					(page "3")
 				)
 			)
 		)
