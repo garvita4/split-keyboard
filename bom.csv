@@ -1,20 +1,27 @@
-Part,Description,Qty,Unit Cost,Total Cost,Vendor
-ESP32-S3-WROOM-1 Module,MCU,2,$4.37,$8.74,Robu.in
-Rotatory encoder,Volume and brightness control,2,$0.64,$1.28,Robu.in
-NFC RFID Reader,For the device unlocking,2,$1.44,$2.88,https://www.indianhobbycenter.com/products/rc522-mini-rfid-reader-writer-spi-s50-with-rfid-card-and-tag?variant=41430763667499
-2000mAh 3.7V Micro LiPo Battery,Power Source,2,$3.43,$6.86,Robu.in
-TP4056 IC,Charging IC,2,$2.00,$4.00,https://www.ktron.in/product/tp4056-ic/#&gid=1&pid=1
-ME6211C33M5G,Regulators,2,$0.08,$0.16,Robu.in
-AO3400A-HUASHUO,LED Mosfet,2,$0.06,$0.12,Robu.in
-SMD1206B050TF,Fuse,1,$0.05,$0.05,Robu.in
-TYPE-C,Charging and interconnection,4,$0.27,$1.08,Robu.in
-1N4148WS,Diodes,50,$0.12,$6.00,Robu.in
-LED,Backlight,50,$0.01,$0.50,Robu.in
-Resistor,Led Protection And other things,60,$0.01,$0.60,Ktron.in
-Capacitors,for the component electrical stability,30,$0.01,$0.30,https://www.ktron.in/product/resistor-30k-ohms-1-1-8w-smd-0805/
-Gateron Oil King,Switches,5,$2.58,$12.90,https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/akko-v3-pro-cream-black-switch/
-PCB,Component Housing,1,$45.00,$45.00,https://zbotic.in/pcb-manufacturing/
-1.8 TFT display,Display,2,$3.19,$6.38,Robu.in
-Slide Switch,Power Control,2,$0.01,$0.02,Robu.in
-smdswitches,rebbot and flash,1,$0.21,$0.21,https://makerbazar.in/products/micro-tactile-tact-keys-tasten-smd-push-side-button-schalter
-Grand Total,,,,$117.08,
+Category,Component,Total Qty,Package/Specs,Unit Price (INR),Total Price (INR),Unit Price (USD),Total Price (USD),Sourcing Link
+Processing & Communications,ESP32-S3-WROOM-1,2,"SMD Module. Dual-core, Wi-Fi/BLE (16MB Flash, 8MB PSRAM)",569.0,1138.0,6.0324,12.06,https://robu.in/product/espressif-esp32-s3-wroom-1-n16r8-module/
+Processing & Communications,RC522 Mini NFC Module,2,Mini PCB Module. SPI interface.,139.0,278.0,1.4736,2.95,https://www.indianhobbycenter.com/products/rc522-mini-rfid-reader-writer-spi-s50-with-rfid-card-and-tag
+Processing & Communications,"1.8"" TFT Display",2,SPI interface (ST7735/SPI).,309.0,618.0,3.2759,6.55,https://robu.in/product/62060/
+Inputs & Key Matrix,MX Mechanical Switches,42,Cherry MX2A Mechanical Switches (₹391 / pack of 10).,39.1,1642.2,0.4145,17.41,https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/cherry-mx2a-switch/
+Inputs & Key Matrix,Switch Diodes,42,1N4148WS SMD Diodes (SOD-323 Package).,1.09,45.78,0.0116,0.49,https://www.sunrom.com/p/1n4148---1n4148ws---t4---smd---sod323-0805
+Inputs & Key Matrix,EC11 Rotary Encoder,2,5-pin through-hole with push button.,58.0,116.0,0.6149,1.23,https://robu.in/product/hongyan-ec11h-7ce15p1zd15f7-rotary-encoder-with-push-button-switch-vertical-plug-in-5-pin-360-degree/
+Illumination (LED Backlight),0805 White LEDs,42,0805 SMD Backlight LEDs.,0.58,24.36,0.0061,0.26,https://www.ktron.in/product/smd-white-led-0805-package/
+Illumination (LED Backlight),AO3400A N-Channel MOSFET,2,SOT-23. LED PWM dimming control.,6.0,12.0,0.0636,0.13,https://robu.in/product/1-month-warranty-414/
+Power & Connectivity,16-Pin USB Type-C Receptacle,4,SMD 16-pin connector. Host/Charging & Interconnect.,5.55,22.2,0.0588,0.24,https://www.ktron.in/product/16-pin-usb-type-c-connector-smd/
+Power & Connectivity,"10,000 mAh LiPo Battery",2,3.7V - 4.2V Single Cell.,399.0,798.0,4.2301,8.46,https://makerbazar.in/products/single-cell-3-7v-10000mah-lipo-battery
+Power & Connectivity,TP4056 IC,2,SOP-8. LiPo battery charger.,5.05,10.1,0.0535,0.11,https://www.ktron.in/product/tp4056-ic/
+Power & Connectivity,ME6211A33M3G IC,2,SOT-23-5. 3.3V LDO regulator (500mA).,8.0,16.0,0.0848,0.17,https://robu.in/product/me6211c33m5g-n-microne-500ma-fixed-3-3v-positive-electrode-6v-sot-23-5-voltage-regulators-linear-low-drop-out-ldo-regulators-rohs/
+Power & Connectivity,SMD1206P050TF/13.2 (PTC),2,1206 SMD. 500mA Resettable Fuse.,9.0,18.0,0.0954,0.19,https://robu.in/product/smd1206-050c-6v-bnstar-6v-40a-500ma-1a-1206-resettable-rohs/
+Power & Connectivity,SMD Push Switches,4,3x4x2.5mm SMD Tactile Switch (For BOOT/EN).,4.29,17.16,0.0455,0.18,https://robu.in/product/tsa043a2026a-bzcn-3x4x2-5-50ma-round-button-50gf-12v-smd-tactile-switches-rohs/
+Power & Connectivity,Slide Switch,2,SPDT Slide Switch (Battery Disconnect).,2.7,5.4,0.0286,0.06,https://robu.in/product/1-month-warranty-254/
+Supporting Passives,100Ω Resistor,42,0805 SMD. LED current limiting.,0.3,12.6,0.0032,0.13,https://www.ktron.in/product/resistor-100-ohms-1-1-8w-smd-0805/
+Supporting Passives,10kΩ Resistor,12,0805 SMD. Pull-downs/ups.,0.3,3.6,0.0032,0.04,https://www.ktron.in/product/resistor-10k-ohms-1-1-8w-smd-0805/
+Supporting Passives,56kΩ Resistor,4,0805 SMD. HOST_PWR_EN divider upper.,0.3,1.2,0.0032,0.01,https://www.ktron.in/product/resistor-56k-ohms-1-1-8w-smd-0805/
+Supporting Passives,5.1kΩ Resistor,4,0805 SMD. HOST_PWR_EN divider lower.,0.3,1.2,0.0032,0.01,https://www.ktron.in/product/resistor-5k1-ohms-5-1-8w-smd-0805/
+Supporting Passives,1.2kΩ Resistor,2,0805 SMD. TP4056 PROG pin (1000mA).,0.3,0.6,0.0032,0.01,https://www.ktron.in/product/resistor-1k2-ohms-1-1-8w-smd-0805/
+Supporting Passives,10µF Capacitor,10,0805 SMD. Decoupling.,7.98,79.8,0.0846,0.85,https://www.ktron.in/product/10uf-50v-multi-layered-ceramic-capacitor-mlcc-x5r-smd-0805-yageo-cc0805kkx5r9bb106/
+Supporting Passives,1µF Capacitor,2,0805 SMD. Power rail filtering.,8.5,17.0,0.0901,0.18,https://www.ktron.in/product/1uf-50v-multi-layered-ceramic-capacitor-yageo/
+Supporting Passives,100nF Capacitor,8,0805 SMD. High-frequency noise decoupling.,1.0,8.0,0.0106,0.08,https://www.ktron.in/product/100nf-25v-multi-layered-ceramic-capacitor/
+PCB,Custom PCB,Component Housing,1,Custom-designed PCB fabrication,4243.50,4243.50,45.00,45.00,https://zbotic.in/
+
+TOTAL,Grand Total,,,,9128.70,,96.79,
