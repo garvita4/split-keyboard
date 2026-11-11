@@ -128,18 +128,13 @@ The keyboard enclosure is modelled in Fusion 360 to accommodate the custom PCB, 
 ---
 
 ## Firmware
-
-The firmware is implemented using the Arduino framework and PlatformIO for the ESP32-S3 microcontrollers. It enables wireless communication between the two halves of the split keyboard using ESP-NOW, while the left half acts as the primary Bluetooth HID device.
-
-The firmware scans the 4 × 6 key matrix, detects key presses and releases, and maps them to keyboard characters. The left half sends keystrokes to the connected device over Bluetooth Low Energy (BLE), while the right half transmits key events wirelessly to the left half.
-
-The implementation uses the `BleKeyboard` library for Bluetooth keyboard functionality and ESP-NOW for communication between the two halves. The current firmware provides the foundation for the keyboard's core input functionality and can be extended with additional key mappings, layers, and peripheral integrations.
+This firmware made without prior testing as I didnt complete the hardware once the hardware will complete i will run the firmware and make the optimal changes to make it run flawlessly...
 
 ---
 
 ## Bill of Materials (BOM)
 
-The following table lists the components required to build the REIKAI split mechanical keyboard, including specifications, quantities, estimated costs, and sourcing links.
+The following table lists the components required to build the split mechanical keyboard, including specifications, quantities, estimated costs, and sourcing links.
 
 ### Component Breakdown
 
