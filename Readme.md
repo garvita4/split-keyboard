@@ -143,7 +143,7 @@ I wrote the firmware before the physical hardware was assembled, so I haven't be
 
 **AI Disclosure:** AI tools were used for firmware development. I initially considered existing keyboard firmware frameworks like QMK and ZMK, but their hardware support and existing implementations didn't directly fit all the requirements of this project. QMK has limited built-in Bluetooth support, while ZMK's tested hardware support does not directly cover my ESP32-S3 setup, and its display support is still under development. Integrating all the additional features, including the TFT displays, rotary encoders, RFID/NFC modules, and individually controlled backlighting, would therefore require additional customization.
 
-The firmware was built using the Arduino framework with full help of AI.**AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, and 3D CAD modeling were done separately by me, alongside guidance and pcb from Mr. Chronos.
+The firmware was built using the Arduino framework with full help of AI...so the firmware is heavily vibecoded .....i'll make one when the hardware part is done.**AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, and 3D CAD modeling were done separately by me, alongside guidance and pcb from Mr. Chronos.
 
 Once the physical hardware is assembled and the initial testing is complete, I'll work on optimizing the firmware, fixing any hardware-related issues, and updating the code and documentation as soon as possible.
 
