@@ -145,8 +145,6 @@ I wrote the firmware before the physical hardware was assembled, so I haven't be
 
 The firmware was built using the Arduino framework with full help of AI...so the firmware is heavily vibecoded .....i'll make one when the hardware part is done.**AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, and 3D CAD modeling were done separately by me, alongside guidance and pcb from Mr. Chronos.
 
-Once the physical hardware is assembled and the initial testing is complete, I'll work on optimizing the firmware, fixing any hardware-related issues, and updating the code and documentation as soon as possible.
-
 ## Display, Backlight, and NFC Features
 
 Some additional features that I added to this project:
