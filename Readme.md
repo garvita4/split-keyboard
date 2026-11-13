@@ -2,120 +2,131 @@
 
 ## Overview
 
-This is a custom spli keybaord with the 1.8inch tft diaply and rotatory encoder and also with nfc based lock system with the controlable backlight . This keyboard can be used as wired keybaord as well as the wireless keybaord with the 2 bluetooth profile 
+This is a custom split mechanical keyboard that I designed with two ESP32-S3 microcontrollers, one for each half. I added a few extra features different from a normal keyboard, including 1.8-inch TFT displays, rotary encoders, RFID/NFC-based locking, and adjustable per-key backlighting.
+This keyboard can be used as wired keybaord as well as the wireless keybaord with the 2 bluetooth profile 
 
 ![Fully Assembled Keyboard](images/kbd-final.png)
 
----
+
+##  Collaboration & Attribution (Team Project)
+
+This project was built in collaboration with my friend **Mr. Chronos** ([Chronos-03/Chronos-keybaord](https://github.com/Chronos-03/Chronos-keybaord)).as I was learning several things from scratch, we worked together over meet sessions. our files look very similar beause they were made side by side in real time. I created my own project files step-by-step alongside him and mutually debugged issues.
+you'll see that my schematics and pcb are exactly same as Mr. Chronos, so i wanna clarify that my schematic was made by me only and it looks same bcz we did it side by side together on our own projects, and about the pcb, we both made our own first(as recorded in lapse) but i chose his pcb as the final one as it was better for manufacturing....but i hope we get the time recorded on the lapse for that.
+
+###  Breakdown of Contributions (What I Did vs. What Chronos Did)
+
+**What I Did Myself (Time Claimed):**
+Drew the complete schematic in KiCad myself while following along in real time, verifying component connections, and helping spot/fix schematic errors during our sessions.Placed the components, routed the PCB tracks on my board, and resolved the DRC/ERC errors with his help. Built the 3D case step-by-step while learning CAD modeling from him. I also independently modified and fine-tuned my case design by adding rounded corners (fillets) to give it a smoother, distinct aesthetic compared to his.
+
+**What Mr. Chronos Did (Time NOT Claimed):**
+Guided me through the schematic design, PCB routing rules, error resolution, and 3D CAD workflow via screen share.The PCB panelization / mouse bites and shared fabrication prep were done directly by Mr. Chronos. **I have not claimed any time for this part.**
+
+## Why did i make this
+I just wanted to make something cool which i myself yould love to use in a long run.And this idea came randomly, while discussing projects with my friend Mr. Chronos.We both liked the idea, so we decided to stick with it and gradually started adding more features to make it our own.
 
 ## Key Features
 
 ### Split Mechanical Layout
 
-Two separate keyboard halves, each built around its own ESP32-S3 microcontroller and supporting electronics.
- Each side having 21 MX switches and with the backlight. 
+the keyboard is in two separate halves, with each half having its own ESP32-S3 microcontroller. Each side has 21 Cherry MX switches, giving the keyboard a total of 42 keys. I also included individual backlighting for the keys.
 ![Full Keyboard Layout](images/keyboard-layout.png)
 
 ### Rotary Encoder Controls
 
-EC11 rotary encoders provide physical controls for functions such as volume and brightness.
+EC11 rotary encoders helps in  easily adjusting settings like volume and screen brightness.
 
 ![Rotary Encoder Schematic](images/rotary-encoders.png)
 
 ### TFT Display
 
-Two 1.8-inch TFT displays are included for displaying system information such as battery percentage and connectivity status. Can also play animation on idle state.
+Two 1.8-inch TFT displays show information like battery level and connection status. They can also play animations when the keyboard is not in use.
 
 ![Display Schematic](images/display.png)
 
 ### RFID Integration
 
-RC522 readers provide the hardware for RFID card detection and card-based interactions used to unlock the keyboard or the PC depend on the firmware either use it as the keyboard lock or use it to open the pc via your nfc tag or the phone nfc 
+integrated an RC522 RFID reader into each half. This allows the keyboard to read RFID cards and NFC tags. I also added the option to use this feature as a keyboard lock or to trigger PC unlocking through a supported NFC tag or phone.
 
 ![RFID Schematic](images/rfid.png)
 
 ### Rechargeable Power
 
-Each half has a rechargeable 10000 mah LiPo battery witht he inbuilt BMS which power up the whole half and can provide long lasting backup on the bluetooth mode .
+Each half has a rechargeable 10,000 mAh LiPo battery and a built-in BMS to power all its components. this can provide long battery life when using Bluetooth mode.
 
 ![Power Management Schematic](images/power-management.png)
 
 ### Per-Key Backlighting
 
-White 0805 SMD LEDs are use to work as the backlight like professional keybaord with the intensity control uc an control the backlight intensity with the same rotatory encoder 
+White 0603 SMD LEDs are use to work as the backlight like any professional keybaord. its intensity can be controlled  with the same rotatory encoder.
 
 ![LED Schematic](images/resistors-leds.png)
 
----
 
 ## Schematic Design
 
 ### Key Switch Matrix
 
-The switch matrix connects the mechanical switches to the microcontroller. Diodes help prevent unwanted electrical paths during simultaneous key presses.
+The switch matrix connects the mechanical switches to the microcontroller. diodes prevent unwanted signals when multiple keys are pressed at the same time.
 
 ![Key Switch Matrix](images/key-matrix.png)
 
 ### Switches and Diodes
 
-Mechanical switches provide individual key inputs, while 1N4148WS diodes support switch-matrix isolation.
-
+Each mechanical switch registers an individual key press, while the 1N4148WS diodes help prevent unwanted signal interference when multiple keys are pressed together.
 
 ### Resistors and LEDs
 
-Resistors support the associated circuits, while white SMD LEDs provide per-key backlighting.
+Resistors support the circuits and help in its proper working, while white SMD LEDs provide backlighting for each key.
 
 ![Resistors and LEDs](images/resistors-leds.png)
 
 ### Microcontroller
 
-The ESP32-S3-WROOM-1-N4R8 acts as the main controller for each keyboard half.
+The ESP32-S3-WROOM-1-N4R8 acts as the main controller for each half.
 
 ![ESP32-S3 Schematic](images/esp32-s3.png)
 
 ### Rotary Encoders
 
-The EC11 encoders provide rotation and switch inputs for additional keyboard controls.
+The EC11 encoders can be pressed or rotated to access additional keyboard controls.
 
 ![Rotary Encoder Schematic](images/rotary-encoders.png)
 
 ### Display Circuit
 
-The display connections allow the ESP32-S3 to communicate with the TFT modules.
+The TFT displays are connected to the ESP32-S3 so they can show battery information, connection status, and other keyboard details.
 
 ![Display Schematic](images/display.png)
 
 ### RFID Circuit
 
-The RC522 reader connections provide the interface for RFID card detection.
+The RC522 modules are connected to the ESP32-S3 to read RFID cards and NFC tags.
 
 ![RFID Schematic](images/rfid.png)
 
 ### Power Management
 
-The power circuit includes LiPo battery charging, 3.3 V regulation, MOSFET switching, and resettable overcurrent protection.
+For the power section, TP4056 charging ICs, ME6211 voltage regulators and AO3400A MOSFETs are used. I also added resettable PTC protection.
 
 ![Power Management](images/power-management.png)
 
 ### USB-C Connectivity
 
-USB-C connectors provide the interfaces intended for charging, firmware uploading, and supported wired connections.
+The USB-C ports are used for charging, uploading firmware, and connecting the keyboard using a wired connection.
 
 ![USB-C Schematic](images/usb-c.png)
 
----
 
 ## PCB Design
 
-The custom schematic and PCB layout were designed in KiCad, with the boards manufactured by Zbotic. The PCB integrates the keyboard matrix, controller connections, peripheral interfaces, backlighting, and power circuitry.
+The schematic and PCB layout were designed in KiCad, and the boards are manufactured by Zbotic. The PCB contains the keyboard matrix, controller connections, peripheral interfaces, LED backlighting, and power circuits.
 
 ![PCB Layout](images/pcb-layout.png)
 
----
 
 ## CAD Design
 
-The keyboard enclosure is modelled in Fusion 360 to accommodate the custom PCB, switches, displays, rotary encoders, and internal electronics.
+The keyboard case was designed in Fusion 360 to fit all the components, including the custom PCB, switches, displays, rotary encoders, and other internal electronics.
 
 ### Enclosure
 
@@ -125,52 +136,57 @@ The keyboard enclosure is modelled in Fusion 360 to accommodate the custom PCB, 
 
 ![Complete CAD Assembly](images/cad-assembly.png)
 
----
 
-## Firmware
-This firmware made without prior testing as I didnt complete the hardware once the hardware will complete i will run the firmware and make the optimal changes to make it run flawlessly...
+## Firmware Status
 
----
+I wrote the firmware before the physical hardware was assembled, so I haven't been able to test it on the actual PCB yet. Once the boards are ready, I'll flash them and check each component individually. I'll make changes wherever needed and update the code based on how everything performs on the actual hardware.
+
+**AI Disclosure:** AI tools were used as an aid only during firmware development. I initially considered existing keyboard firmware frameworks like QMK and ZMK, but their hardware support and existing implementations didn't directly fit all the requirements of this project. QMK has limited built-in Bluetooth support, while ZMK's tested hardware support does not directly cover my ESP32-S3 setup, and its display support is still under development. Integrating all the additional features, including the TFT displays, rotary encoders, RFID/NFC modules, and individually controlled backlighting, would therefore require additional customization.
+
+I decided to develop custom firmware using C++ with ESP-IDF and FreeRTOS, taking AI assistance for writing parts of the code, implementing features, debugging, and refining the logic. **AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, PCB layout, and 3D CAD modeling were done separately by me, alongside guidance from Mr. Chronos.
+
+Once the physical hardware is assembled and the initial testing is complete, I'll work on optimizing the firmware, fixing any hardware-related issues, and updating the code and documentation as soon as possible.
+
+## Display, Backlight, and NFC Features
+
+Some additional features that I added to this project:
+* **Display:** A 1.8-inch SPI TFT display that shows battery status, backlight brightness, the active layer, and NFC tag UIDs.
+* **Backlight:** 0603 SMD LEDs with PWM brightness control through the rotary encoder and wireless syncing.
+* **NFC:** An RC522 NFC module connected through SPI for scanning NFC tags.
+
+Getting the display, backlight, and NFC features working alongside the wireless keyboard took quite a bit of work. I had to make changes to the firmware to get everything working together. The firmware is ready for testing, but the actual on-board checks and final testing will be done once the physical hardware is assembled.
+
 
 ## Bill of Materials (BOM)
 
-The following table lists the components required to build the split mechanical keyboard, including specifications, quantities, estimated costs, and sourcing links.
-
-### Component Breakdown
-
-| Category | Component | Qty | Specifications | Unit Price (INR) | Total (INR) | Unit Price (USD) | Total (USD) | Source |
-|---|---|---:|---|---:|---:|---:|---:|---|
-| Processing & Communications | ESP32-S3-WROOM-1 | 2 | Dual-core, Wi-Fi/BLE, 16MB Flash, 8MB PSRAM | ₹569.00 | ₹1,138.00 | $6.0324 | $12.06 | [Robu](https://robu.in/product/espressif-esp32-s3-wroom-1-n16r8-module/) |
-| Processing & Communications | RC522 Mini NFC Module | 2 | Mini PCB, SPI interface | ₹139.00 | ₹278.00 | $1.4736 | $2.95 | [Indian Hobby Center](https://www.indianhobbycenter.com/products/rc522-mini-rfid-reader-writer-spi-s50-with-rfid-card-and-tag) |
-| Processing & Communications | 1.8" TFT Display | 2 | SPI interface, ST7735 | ₹309.00 | ₹618.00 | $3.2759 | $6.55 | [Robu](https://robu.in/product/62060/) |
-| Inputs & Key Matrix | MX Mechanical Switches | 42 | Cherry MX2A, ₹391 per pack of 10 | ₹39.10 | ₹1,642.20 | $0.4145 | $17.41 | [Meckeys](https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/cherry-mx2a-mechanical-switch/) |
-| Inputs & Key Matrix | Switch Diodes | 42 | 1N4148WS, SOD-323 | ₹1.09 | ₹45.78 | $0.0116 | $0.49 | [Sunrom](https://www.sunrom.com/p/1n4148---1n4148ws---t4---smd---sod323-0805) |
-| Inputs & Key Matrix | EC11 Rotary Encoder | 2 | 5-pin, through-hole, push button | ₹58.00 | ₹116.00 | $0.6149 | $1.23 | [Robu](https://robu.in/product/hongyan-ec11h-7ce15p1zd15f7-rotary-encoder-with-push-button-switch-vertical-plug-in-5-pin-360-degree/) |
-| Illumination | 0805 White LEDs | 42 | SMD backlight LEDs | ₹0.58 | ₹24.36 | $0.0061 | $0.26 | [KTRON](https://www.ktron.in/product/smd-white-led-0805-package/) |
-| Illumination | AO3400A N-Channel MOSFET | 2 | SOT-23, LED PWM dimming | ₹6.00 | ₹12.00 | $0.0636 | $0.13 | [Robu](https://robu.in/product/1-month-warranty-414/) |
-| Power & Connectivity | USB Type-C Receptacle | 4 | 16-pin SMD connector | ₹5.55 | ₹22.20 | $0.0588 | $0.24 | [KTRON](https://www.ktron.in/product/16-pin-usb-type-c-connector-smd/) |
-| Power & Connectivity | 10,000 mAh LiPo Battery | 2 | Single-cell, 3.7V–4.2V | ₹399.00 | ₹798.00 | $4.2301 | $8.46 | [MakerBazar](https://makerbazar.in/products/single-cell-3-7v-10000mah-lipo-battery) |
-| Power & Connectivity | TP4056 IC | 2 | SOP-8, LiPo charger | ₹5.05 | ₹10.10 | $0.0535 | $0.11 | [KTRON](https://www.ktron.in/product/tp4056-ic/) |
-| Power & Connectivity | ME6211A33M3G IC | 2 | SOT-23-5, 3.3V LDO regulator | ₹8.00 | ₹16.00 | $0.0848 | $0.17 | [Robu](https://robu.in/product/me6211c33m5g-n-microne-500ma-fixed-3-3v-positive-electrode-6v-sot-23-5-voltage-regulators-linear-low-drop-out-ldo-regulators-rohs/) |
-| Power & Connectivity | Resettable PTC Fuse | 2 | 1206, 500mA | ₹9.00 | ₹18.00 | $0.0954 | $0.19 | [Robu](https://robu.in/product/smd1206-050c-6v-bnstar-6v-40a-500ma-1a-1206-resettable-rohs/) |
-| Power & Connectivity | SMD Push Switches | 4 | 3×4×2.5mm, BOOT/EN | ₹4.29 | ₹17.16 | $0.0455 | $0.18 | [Robu](https://robu.in/product/tsa043a2026a-bzcn-3x4x2-5-50ma-round-button-50gf-12v-smd-tactile-switches-rohs/) |
-| Power & Connectivity | Slide Switch | 2 | SPDT, battery disconnect | ₹2.70 | ₹5.40 | $0.0286 | $0.06 | [Robu](https://robu.in/product/1-month-warranty-254/) |
-| Supporting Passives | 100Ω Resistor | 42 | 0805 SMD, LED current limiting | ₹0.30 | ₹12.60 | $0.0032 | $0.13 | [KTRON](https://www.ktron.in/product/resistor-100-ohms-1-1-8w-smd-0805/) |
-| Supporting Passives | 10kΩ Resistor | 12 | 0805 SMD, pull-up/pull-down | ₹0.30 | ₹3.60 | $0.0032 | $0.04 | [KTRON](https://www.ktron.in/product/resistor-10k-ohms-1-1-8w-smd-0805/) |
-| Supporting Passives | 56kΩ Resistor | 4 | 0805 SMD, HOST_PWR_EN divider | ₹0.30 | ₹1.20 | $0.0032 | $0.01 | [KTRON](https://www.ktron.in/product/resistor-56k-ohms-1-1-8w-smd-0805/) |
-| Supporting Passives | 5.1kΩ Resistor | 4 | 0805 SMD, HOST_PWR_EN divider | ₹0.30 | ₹1.20 | $0.0032 | $0.01 | [KTRON](https://www.ktron.in/product/resistor-5k1-ohms-5-1-8w-smd-0805/) |
-| Supporting Passives | 1.2kΩ Resistor | 2 | 0805 SMD, TP4056 PROG pin | ₹0.30 | ₹0.60 | $0.0032 | $0.01 | [KTRON](https://www.ktron.in/product/resistor-1k2-ohms-1-1-8w-smd-0805/) |
-| Supporting Passives | 10µF Capacitor | 10 | 0805 SMD, decoupling | ₹7.98 | ₹79.80 | $0.0846 | $0.85 | [KTRON](https://www.ktron.in/product/10uf-50v-multi-layered-ceramic-capacitor-mlcc-x5r-smd-0805-yageo-cc0805kkx5r9bb106/) |
-| Supporting Passives | 1µF Capacitor | 2 | 0805 SMD, power filtering | ₹8.50 | ₹17.00 | $0.0901 | $0.18 | [KTRON](https://www.ktron.in/product/1uf-50v-multi-layered-ceramic-capacitor-yageo/) |
-| Supporting Passives | 100nF Capacitor | 8 | 0805 SMD, noise decoupling | ₹1.00 | ₹8.00 | $0.0106 | $0.08 | [KTRON](https://www.ktron.in/product/100nf-25v-multi-layered-ceramic-capacitor/) |
-| PCB | Custom PCB | 1 | Custom-designed PCB fabrication | ₹4,243.50 | ₹4,243.50 | $45.00 | $45.00 | [Zbotic](https://zbotic.in/) |
-
-### Cost Summary
-
-| Description | Amount |
-|---|---:|
-| **Grand Total (INR)** | **₹9,128.80** |
-| **Grand Total (USD)** | **$96.80** |
+| Item | Qty | Supplier | Cost/item | Total Cost | Link |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ESP32-S3-WROOM-1 Module | 2 | Robu.in | $6.03 | $12.06 | [Buy](https://robu.in/product/espressif-esp32-s3-wroom-1-n16r8-module/) |
+| NFC RFID Reader | 2 | IndianHobbyCenter | $1.47 | $2.94 | [Buy](https://www.indianhobbycenter.com/products/rc522-mini-rfid-reader-writer-spi-s50-with-rfid-card-and-tag) |
+| PCB | 1 | Zbotic | $45.00 | $45.00 | [Buy](https://zbotic.in/) |
+| 1.8" TFT Display | 2 | Robu.in | $3.28 | $6.56 | [Buy](https://robu.in/product/62060/) |
+| Cherry MX2A Mechanical Switches | 42 | meckeys | $0.41 | $17.22 | [Buy](https://meckeys.com/shop/accessories/keyboard-accessories/key-switches/cherry-mx2a-switch/) |
+| 1N4148WS SMD Diodes (SOD-323) | 42 | surnom.com | $0.01 | $0.42 | [Buy](https://www.sunrom.com/p/1n4148---1n4148ws---t4---smd---sod323-0805) |
+| EC11 Rotary Encoder | 2 | robu.in | $0.61 | $1.22 | [Buy](https://robu.in/product/hongyan-ec11h-7ce15p1zd15f7-rotary-encoder-with-push-button-switch-vertical-plug-in-5-pin-360-degree/) |
+| 0603 SMD Backlight LEDs | 42 | ktron.in | $0.01 | $0.42 | [Buy](https://www.ktron.in/product/smd-white-led-0603-package/) |
+| AO3400A N-Channel MOSFET | 2 | robu.in | $0.06 | $0.12 | [Buy](https://robu.in/product/1-month-warranty-414/) |
+| SMD 16-pin connector | 4 | ktron.in | $0.06 | $0.24 | [Buy](https://www.ktron.in/product/16-pin-usb-type-c-connector-smd/) |
+| 10,000 mAh LiPo Battery | 2 | makerbazar.in | $4.23 | $8.46 | [Buy](https://makerbazar.in/products/single-cell-3-7v-10000mah-lipo-battery) |
+| TP4056 IC | 2 | ktron.in | $0.05 | $0.10 | [Buy](https://www.ktron.in/product/tp4056-ic/) |
+| ME6211A33M3G IC | 2 | Robu.in | $0.08 | $0.16 | [Buy](https://robu.in/product/me6211c33m5g-n-microne-500ma-fixed-3-3v-positive-electrode-6v-sot-23-5-voltage-regulators-linear-low-drop-out-ldo-regulators-rohs/) |
+| SMD1206P050TF/13.2 (PTC) | 2 | Robu.in | $0.10 | $0.20 | [Buy](https://robu.in/product/smd1206-050c-6v-bnstar-6v-40a-500ma-1a-1206-resettable-rohs/) |
+| SMD Push Switches | 4 | Robu.in | $0.05 | $0.20 | [Buy](https://robu.in/product/tsa043a2026a-bzcn-3x4x2-5-50ma-round-button-50gf-12v-smd-tactile-switches-rohs/) |
+| Slide Switch | 2 | Robu.in | $0.03 | $0.06 | [Buy](https://robu.in/product/1-month-warranty-254/) |
+| 100Ω Resistor | 42 | ktron.in | $0.01 | $0.42 | [Buy](https://www.ktron.in/product/resistor-100-ohms-1-1-8w-smd-0805/) |
+| 10kΩ Resistor | 12 | ktron.in | $0.01 | $0.12 | [Buy](https://www.ktron.in/product/resistor-10k-ohms-1-1-8w-smd-0805/) |
+| 56kΩ Resistor | 4 | ktron.in | $0.01 | $0.04 | [Buy](https://www.ktron.in/product/resistor-56k-ohms-1-1-8w-smd-0805/) |
+| 5.1kΩ Resistor | 4 | ktron.in | $0.01 | $0.04 | [Buy](https://www.ktron.in/product/resistor-5k1-ohms-5-1-8w-smd-0805/) |
+| 1.2kΩ Resistor | 2 | ktron.in | $0.01 | $0.02 | [Buy](https://www.ktron.in/product/resistor-1k2-ohms-1-1-8w-smd-0805/) |
+| 10µF Capacitor | 10 | ktron.in | $0.08 | $0.80 | [Buy](https://www.ktron.in/product/10uf-50v-multi-layered-ceramic-capacitor-mlcc-x5r-smd-0805-yageo-cc0805kkx5r9bb106/) |
+| 1µF Capacitor | 2 | ktron.in | $0.09 | $0.18 | [Buy](https://www.ktron.in/product/1uf-50v-multi-layered-ceramic-capacitor-yageo/) |
+| 100nF Capacitor | 8 | ktron.in | $0.01 | $0.08 | [Buy](https://www.ktron.in/product/100nf-25v-multi-layered-ceramic-capacitor/) |
+| Estimated total shipping | 1 | | | $0.00 | |
+| **Grand Total** | | | | **$97.08** | |
 
 
 ## Tools & Technologies
