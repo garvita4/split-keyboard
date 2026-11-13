@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 1.27
+          "drill": 4.0,
+          "height": 4.0,
+          "width": 4.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -146,7 +146,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.09,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -211,7 +211,7 @@
       ],
       "track_widths": [
         0.0,
-        0.1,
+        0.0,
         0.25,
         0.5,
         1.0
@@ -505,14 +505,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "splitkeybaord.kicad_pro",
+    "filename": "split keyboard.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.127,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -523,7 +523,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -541,9 +541,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "../../../../GitHub/Split-keyboard/check/",
+      "plot": "",
       "specctra_dsn": "",
-      "step": "splitkeybaord.step",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -628,12 +628,42 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -666,14 +696,6 @@
     "meta": {
       "version": 1
     },
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -681,25 +703,25 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "splitkeybaord.kicad_sch",
+        "filename": "split keyboard.kicad_sch",
         "name": "Root",
-        "uuid": "667832f1-ce12-4971-b6ce-e9db115b7c92"
+        "uuid": "e1af24d2-b379-41bc-99d4-76686fb1dd1a"
       }
     ],
-    "used_designators": "#FLG1-10,J1-8,LED1-42,USBC1-4,R1-74,F1-2,SW1-52,C1-20,U1-6,#PWR1-66,D1-42,Q1-2",
+    "used_designators": "J1-10,LED1-76,R1-110,F1-2,U1-6,#PWR1-74,C1-20,Q1-2,D1-48,SW1-52,USBC1-4",
     "variants": []
   },
   "sheets": [
     [
-      "667832f1-ce12-4971-b6ce-e9db115b7c92",
+      "e1af24d2-b379-41bc-99d4-76686fb1dd1a",
       "Root"
     ],
     [
-      "4bd30d72-a016-4430-88d8-3590e5447e27",
+      "b1a493ff-6fdc-4768-884d-f4039f6a72a3",
       "left"
     ],
     [
-      "d7264bbc-2527-4862-872f-0e3343d10ef9",
+      "7959ea45-cec8-4fd5-ab7f-28a11d4ef1b9",
       "right"
     ]
   ],
