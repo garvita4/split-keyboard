@@ -11,7 +11,7 @@ This keyboard can be used as wired keybaord as well as the wireless keybaord wit
 ##  Collaboration & Attribution (Team Project)
 
 This project was built in collaboration with my friend **Mr. Chronos** ([Chronos-03/Chronos-keybaord](https://github.com/Chronos-03/Chronos-keybaord)).as I was learning several things from scratch, we worked together over meet sessions. our files look very similar beause they were made side by side in real time. I created my own project files step-by-step alongside him and mutually debugged issues.
-you'll see that my schematics and pcb are exactly same as Mr. Chronos, so i wanna clarify that my schematic was made by me only and it looks same bcz we did it side by side together on our own projects, and about the pcb, we both made our own first(as recorded in lapse) but i chose his pcb as the final one as it was better for manufacturing.
+you'll see that my schematics and pcb are exactly same as Mr. Chronos, so i wanna clarify that my schematic was made by me only and it looks same bcz we did it side by side together on our own projects, and about the pcb, it is Mr. Chronos's pcb.
 
 ###  Breakdown of Contributions (What I Did vs. What Chronos Did)
 
@@ -141,9 +141,9 @@ The keyboard case was designed in Fusion 360 to fit all the components, includin
 
 I wrote the firmware before the physical hardware was assembled, so I haven't been able to test it on the actual PCB yet. Once the boards are ready, I'll flash them and check each component individually. I'll make changes wherever needed and update the code based on how everything performs on the actual hardware.
 
-**AI Disclosure:** AI tools were used as an aid only during firmware development. I initially considered existing keyboard firmware frameworks like QMK and ZMK, but their hardware support and existing implementations didn't directly fit all the requirements of this project. QMK has limited built-in Bluetooth support, while ZMK's tested hardware support does not directly cover my ESP32-S3 setup, and its display support is still under development. Integrating all the additional features, including the TFT displays, rotary encoders, RFID/NFC modules, and individually controlled backlighting, would therefore require additional customization.
+**AI Disclosure:** AI tools were used for firmware development. I initially considered existing keyboard firmware frameworks like QMK and ZMK, but their hardware support and existing implementations didn't directly fit all the requirements of this project. QMK has limited built-in Bluetooth support, while ZMK's tested hardware support does not directly cover my ESP32-S3 setup, and its display support is still under development. Integrating all the additional features, including the TFT displays, rotary encoders, RFID/NFC modules, and individually controlled backlighting, would therefore require additional customization.
 
-I decided to develop custom firmware using C++ with ESP-IDF and FreeRTOS, taking AI assistance for writing parts of the code, implementing features, debugging, and refining the logic. **AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, PCB layout, and 3D CAD modeling were done separately by me, alongside guidance from Mr. Chronos.
+The firmware was built using the Arduino framework with full help of AI.**AI assistance was limited to the firmware side of the project.** The hardware design, schematic capture, and 3D CAD modeling were done separately by me, alongside guidance and pcb from Mr. Chronos.
 
 Once the physical hardware is assembled and the initial testing is complete, I'll work on optimizing the firmware, fixing any hardware-related issues, and updating the code and documentation as soon as possible.
 
@@ -193,6 +193,6 @@ Getting the display, backlight, and NFC features working alongside the wireless 
 
 - **PCB Design:** KiCad
 - **CAD Modelling:** Fusion 360
-- **Firmware:** Cpp, ESP-IDF, FreeRTOS
+- **Firmware:** Cpp, Arduino, FreeRTOS
 - **Microcontroller:** ESP32-S3
 - **PCB Manufacturing:** Zbotic
